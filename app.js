@@ -2,6 +2,7 @@ function onReady(){
 	const addToDoForm = document.getElementByID('addToDoForm');
 	const newToDoText = document.getElementByID('newToDoText');
 	const toDoList = document.getElementByID('toDoList');
+
 	addToDoForm.addEventListener('submit', () => {
 		event.preventDefault();
 
@@ -13,9 +14,12 @@ function onReady(){
 		checkbox.type = "checkbox";
 
 		newLi.textContent = title;
+
+		toDoList.appendChild(newLi);
 		newLi.appendChild(checkbox);
+
 		newToDoText.value = '';
-		
+
 	});
 }	
 
