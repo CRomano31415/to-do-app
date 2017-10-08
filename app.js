@@ -35,8 +35,9 @@ function onReady(){
 
 			deleteBtn.addEventListener('click', ()=>{
 				todoList.removeChild(newLi);
+				var index = toDos.indexOf(toDo)
+				toDos.splice(index, 1);
 			});
-
 		});
 
 	}
@@ -48,6 +49,7 @@ function onReady(){
 
 
 	renderTheUI(toDos);
+
 }
 
 
